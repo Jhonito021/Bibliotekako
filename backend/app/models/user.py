@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from backend.app.extensions import db
+from ..extensions import db
 
 
 def utcnow():

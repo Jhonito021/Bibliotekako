@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import create_access_token, create_refresh_token, get_jwt_identity, jwt_required
 from sqlalchemy import select
-from backend.app.extensions import bcrypt, db
-from backend.app.models import User
+from ..extensions import bcrypt, db
+from ..models import User
 
 auth_bp = Blueprint("auth", __name__)
 VALID_ROLES = {"admin", "librarian", "reader"}

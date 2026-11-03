@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import or_, select
 from sqlalchemy.exc import IntegrityError
-from backend.app.extensions import db
-from backend.app.models import Author, Book, Category, Publisher
-from backend.app.utils.security import roles_required
+from ..extensions import db
+from ..models import Author, Book, Category, Publisher
+from ..utils.security import roles_required
 
 books_bp = Blueprint("books", __name__)
 authors_bp = Blueprint("authors", __name__)

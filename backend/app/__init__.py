@@ -2,9 +2,9 @@ import os
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-from backend.app.config import Config
-from backend.app.extensions import bcrypt, db, jwt, migrate
-from backend.app.routes import register_routes
+from .config import Config
+from .extensions import bcrypt, db, jwt, migrate
+from .routes import register_routes
 
 
 def create_app():
@@ -20,7 +20,7 @@ def create_app():
     bcrypt.init_app(app)
 
     # Import models so Flask-Migrate can detect them.
-    from backend.app import models  # noqa: F401
+    from . import models  # noqa: F401
 
     register_routes(app)
 

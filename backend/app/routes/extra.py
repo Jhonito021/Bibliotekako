@@ -2,9 +2,9 @@ from datetime import datetime, timedelta
 from flask import Blueprint, jsonify, request, current_app
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
 from sqlalchemy import func
-from backend.app.extensions import db
-from backend.app.models import User, Book, BookCopy, Loan, Reservation, Fine, Notification, AuditLog, AppSetting
-from backend.app.utils.security import roles_required
+from ..extensions import db
+from ..models import User, Book, BookCopy, Loan, Reservation, Fine, Notification, AuditLog, AppSetting
+from ..utils.security import roles_required
 
 extra_bp = Blueprint("extra", __name__)
 STAFF = ("admin", "librarian")

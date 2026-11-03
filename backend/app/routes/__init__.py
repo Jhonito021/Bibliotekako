@@ -1,8 +1,8 @@
-from backend.app.routes.health import health_bp
-from backend.app.routes.auth import auth_bp
-from backend.app.routes.users import users_bp
-from backend.app.routes.catalog import books_bp, authors_bp, categories_bp, publishers_bp
-from backend.app.routes.extra import extra_bp
+from .health import health_bp
+from .auth import auth_bp
+from .users import users_bp
+from .catalog import books_bp, authors_bp, categories_bp, publishers_bp
+from .extra import extra_bp
 
 
 def register_routes(app):

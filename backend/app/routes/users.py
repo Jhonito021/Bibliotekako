@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import select
-from backend.app.extensions import db
-from backend.app.models import User
-from backend.app.utils.security import roles_required
+from ..extensions import db
+from ..models import User
+from ..utils.security import roles_required
 
 users_bp = Blueprint("users", __name__)
 
